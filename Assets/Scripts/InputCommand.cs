@@ -19,12 +19,12 @@ public class InputCommand : ICommand
     {
         _beforeIndex = _numberPanel.panelIndex;
         _numberPanel.panelIndex = _selectedIndex;
-        _numberPanel.ChangePanelColor(PanelState.Selected);
+        _numberPanel.ChangePanelColor();
     }
 
     public void Undo()
     {
         _numberPanel.panelIndex = _beforeIndex;
-        _numberPanel.ChangePanelColor(PanelState.Unselected);
+        _numberPanel.ChangePanelColor();
     }
 }
